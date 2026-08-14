@@ -63,6 +63,16 @@ int main(void) {
     if (strcmp(args.data[0], "exit") == 0) {
       break;
     }
+    // implement cd as it is a built-in command and
+    // these commands needs to be executed within the running shell's process.
+    else if (strcmp(args.data[0], "cd") == 0) {
+      int result = chdir(args.data[1]);
+      // -1 means error;
+      // 0 means success;
+      if (result<0){
+        perror("Failed to change directory");
+      }
+    }
     else {
       // creates duplicate process
       int status;
