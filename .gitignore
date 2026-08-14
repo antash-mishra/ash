@@ -1,0 +1,24 @@
+# Build outputs
+*.o
+*.out
+*.dSYM/
+
+# Local executables built while experimenting
+a
+heap
+hello
+main
+read
+readfile
+
+# macOS
+.DS_Store
+
+# Editor-specific local settings
+.clangd
+.idea/
+.vscode/
+.zed/
+
+# Generated compilation database
+compile_commands.json
